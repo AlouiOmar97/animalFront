@@ -68,8 +68,11 @@
               <input type="text" value="1" />
               <span class="plus-btn"><i class="bx bx-plus"></i></span>
             </div>
-            <button type="submit" class="default-btn">
-              <span>Add to Cart</span>
+            <button
+              (click)="pay(animalProductDetails.price)"
+              class="default-btn"
+            >
+              <span>Buy it</span>
             </button>
           </div>
           <a href="wishlist.html" class="add-to-wishlist"
