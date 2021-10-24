@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Animal } from '../entities/Animal';
-import { HttpClientService } from '../service/http-client.service';
 
 @Component({
   selector: 'app-home',
@@ -8,13 +6,11 @@ import { HttpClientService } from '../service/http-client.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
-  AnimalList: any | undefined;
   
   
 
 
-  constructor(private httpClient: HttpClientService ) { }
+  constructor( ) { }
 
   ngOnInit(): void {
 

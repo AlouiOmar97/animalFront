@@ -1,4 +1,7 @@
 export class Animal {
-    public type: string | undefined;
-    public value: string | undefined;
+    public title: string | undefined;
+    public description: string | undefined;
+    public price: number | undefined;
+    public isActif: boolean | undefined;
+    public category: string | undefined;
 }
