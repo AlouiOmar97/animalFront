@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { AnimalProductService } from '../service/animal-product.service';
 import { PayService } from '../service/pay.service';
+import { ReviewService } from './../service/review.service';
 
 @Component({
   selector: 'app-animal-details',
@@ -11,12 +12,13 @@ import { PayService } from '../service/pay.service';
 export class AnimalDetailsComponent implements OnInit {
 
   animalProductDetails: any | undefined;
+  reviewList: any | undefined;
 
-  constructor(private route: ActivatedRoute,private animalProductService: AnimalProductService,private payService: PayService) { }
+  constructor(private route: ActivatedRoute,private animalProductService: AnimalProductService,private payService: PayService,private reviewService:ReviewService) { }
 
   ngOnInit(): void {
     const productId = this.route.snapshot.paramMap.get('id');
-
+    
     console.log(productId);
     this.animalProductService.getAnimalProductDetails(productId).subscribe(
       data =>{
@@ -27,7 +29,11 @@ export class AnimalDetailsComponent implements OnInit {
       }
     );
 
-    
+    this.reviewService.getReviews().subscribe(data=>{
+      this.reviewList=data;
+      console.log(data);
+      
+    })
   }
 
   pay(productPrice:any){
