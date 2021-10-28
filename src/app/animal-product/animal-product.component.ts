@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AnimalProductService } from '../service/animal-product.service';
 
 @Component({
   selector: 'app-animal-product',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AnimalProductComponent implements OnInit {
 
-  constructor() { }
+ 
+  animalProductList: any | undefined;
+  animalProductListLength :any | undefined;
+  
+  
+
+
+  constructor(private animalProductService: AnimalProductService ) { }
 
   ngOnInit(): void {
+
+    this.animalProductService.getAnimalProducts().subscribe(
+      data =>{
+        this.animalProductList = data;
+        this.animalProductListLength=this.animalProductList.length;
+        console.log(this.animalProductList);
+        console.log(this.animalProductList.length);
+        
+      }
+    );
+  
   }
 
 }

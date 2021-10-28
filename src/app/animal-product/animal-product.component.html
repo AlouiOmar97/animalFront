@@ -1,1 +1,245 @@
-<p>animal-product works!</p>
+<div class="page-title-area">
+  <div class="container">
+    <div class="page-title-content">
+      <h1>Animal Products</h1>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li>Animal Products</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="products-area ptb-100">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-4 col-md-12">
+        <aside class="widget-area">
+          <div class="widget widget_categories">
+            <h3 class="widget-title"><span>Categories</span></h3>
+            <ul>
+              <li><a href="shop-left-sidebar.html">Business</a></li>
+              <li><a href="shop-left-sidebar.html">Privacy</a></li>
+              <li><a href="shop-left-sidebar.html">Technology</a></li>
+              <li><a href="shop-left-sidebar.html">Tips</a></li>
+              <li><a href="shop-left-sidebar.html">Log in</a></li>
+              <li><a href="shop-left-sidebar.html">Uncategorized</a></li>
+            </ul>
+          </div>
+          <div class="widget widget_price_filter">
+            <h3 class="widget-title"><span>Filter by Price</span></h3>
+            <div class="collection_filter_by_price">
+              <input
+                class="js-range-of-price"
+                type="text"
+                data-min="0"
+                data-max="1055"
+                name="filter_by_price"
+                data-step="10"
+              />
+            </div>
+          </div>
+          <div class="widget widget_patoi_posts_thumb">
+            <h3 class="widget-title"><span>Our Best Sellers</span></h3>
+            <article class="item">
+              <a href="products-details.html" class="thumb">
+                <img src="assets/img/products/products1.jpg" alt="blog-image" />
+              </a>
+              <div class="info">
+                <h4 class="title">
+                  <a href="products-details.html">Pet brash</a>
+                </h4>
+                <div class="star-rating">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="price">$150.00</span>
+              </div>
+            </article>
+            <article class="item">
+              <a href="products-details.html" class="thumb">
+                <img src="assets/img/products/products2.jpg" alt="blog-image" />
+              </a>
+              <div class="info">
+                <h4 class="title">
+                  <a href="products-details.html">Automatic dog blue leash</a>
+                </h4>
+                <div class="star-rating">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="price">$150.00</span>
+              </div>
+            </article>
+            <article class="item">
+              <a href="products-details.html" class="thumb">
+                <img src="assets/img/products/products3.jpg" alt="blog-image" />
+              </a>
+              <div class="info">
+                <h4 class="title">
+                  <a href="products-details.html">Cat toilet bowl</a>
+                </h4>
+                <div class="star-rating">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="price">$150.00</span>
+              </div>
+            </article>
+            <article class="item">
+              <a href="products-details.html" class="thumb">
+                <img src="assets/img/products/products4.jpg" alt="blog-image" />
+              </a>
+              <div class="info">
+                <h4 class="title">
+                  <a href="products-details.html">Bowl with rubber toy</a>
+                </h4>
+                <div class="star-rating">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+                <span class="price">$150.00</span>
+              </div>
+            </article>
+          </div>
+          <div class="widget widget_tag_cloud">
+            <h3 class="widget-title"><span>Tags</span></h3>
+            <div class="tagcloud">
+              <a href="shop-left-sidebar.html">Advertisment</a>
+              <a href="shop-left-sidebar.html">Business</a>
+              <a href="shop-left-sidebar.html">Life</a>
+              <a href="shop-left-sidebar.html">Lifestyle</a>
+              <a href="shop-left-sidebar.html">Fashion</a>
+              <a href="shop-left-sidebar.html">Ads</a>
+              <a href="shop-left-sidebar.html">Advertisment</a>
+            </div>
+          </div>
+          <div class="widget widget_follow_us">
+            <h3 class="widget-title"><span>Follow Us</span></h3>
+            <ul>
+              <li><a href="#" target="_blank">Facebook</a></li>
+              <li><a href="#" target="_blank">Twitter</a></li>
+              <li><a href="#" target="_blank">Instagram</a></li>
+              <li><a href="#" target="_blank">Pinterest</a></li>
+              <li><a href="#" target="_blank">Linkedin</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+      <div class="col-lg-8 col-md-12">
+        <div class="patoi-grid-sorting row align-items-center">
+          <div class="col-lg-6 col-md-6 result-count">
+            <p>
+              We found
+              <span class="count">{{ animalProductListLength }}</span> products
+              available for you
+            </p>
+          </div>
+          <div class="col-lg-6 col-md-6 ordering">
+            <div class="select-box">
+              <label>Sort By:</label>
+              <select>
+                <option>Default</option>
+                <option>Popularity</option>
+                <option>Latest</option>
+                <option>Price: low to high</option>
+                <option>Price: high to low</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div
+            class="col-lg-6 col-md-6 col-sm-6"
+            *ngFor="let animal of animalProductList"
+          >
+            <div class="single-products-box">
+              <div class="image">
+                <a href="products-details.html" class="d-block">
+                  <img
+                    src="assets/img/products/products1.jpg"
+                    alt="products-image"
+                  />
+                </a>
+                <ul class="products-button">
+                  <li>
+                    <a href="cart.html"><i class="bx bx-cart-alt"></i></a>
+                  </li>
+                  <li>
+                    <a href="wishlist.html"><i class="bx bx-heart"></i></a>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      data-bs-toggle="modal"
+                      data-bs-target="#productsQuickView"
+                      ><i class="bx bx-show"></i
+                    ></a>
+                  </li>
+                  <li>
+                    <a href="products-details.html"
+                      ><i class="bx bx-link-alt"></i
+                    ></a>
+                  </li>
+                </ul>
+              </div>
+              <div class="content">
+                <h3>
+                  <a [routerLink]="['/product/details/', animal.id]">{{
+                    animal.title
+                  }}</a>
+                </h3>
+                <div class="price">
+                  <span class="new-price">{{ animal.price }} DT</span>
+                </div>
+                <div class="rating">
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                  <i class="bx bxs-star"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ################################################################################################### -->
+
+          <div class="col-lg-12 col-md-12 col-sm-12">
+            <div class="pagination-area">
+              <div class="nav-links">
+                <a
+                  href="shop-left-sidebar.html"
+                  class="previous page-numbers"
+                  title="Next Page"
+                  ><i class="bx bx-chevrons-left"></i
+                ></a>
+                <span class="page-numbers current">1</span>
+                <a href="shop-left-sidebar.html" class="page-numbers">2</a>
+                <a href="shop-left-sidebar.html" class="page-numbers">3</a>
+                <a
+                  href="shop-left-sidebar.html"
+                  class="next page-numbers"
+                  title="Next Page"
+                  ><i class="bx bx-chevrons-right"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
