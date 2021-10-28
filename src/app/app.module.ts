@@ -9,7 +9,10 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnimalProductComponent } from './animal-product/animal-product.component';
 import { AnimalDetailsComponent } from './animal-details/animal-details.component';
-
+import { AnimalAComponent } from './animal-a/animal-a.component';
+import { AnimalADetailComponent } from './animal-adetail/animal-adetail.component';
+import { FormsModule } from '@angular/forms';
+import { PlantAComponent } from './plant-a/plant-a.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,12 +20,15 @@ import { AnimalDetailsComponent } from './animal-details/animal-details.componen
     FooterComponent,
     HomeComponent,
     AnimalProductComponent,
-    AnimalDetailsComponent
+    AnimalDetailsComponent,
+    AnimalAComponent,
+    AnimalADetailComponent,
+    PlantAComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
