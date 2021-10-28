@@ -11,11 +11,11 @@ export class AnimalProductService {
 
    getAnimalProducts()
    {
-     return this.httpClient.get<Animal[]>('http://localhost:8098/getAllAnimalProducts');
+     return this.httpClient.get<Animal[]>('http://localhost:9999/animal/getAllAnimalProducts');
    }
 
    getAnimalProductDetails(id:any)
    {
-     return this.httpClient.get<Animal[]>('http://localhost:8098/getAnimalProductById/'+id);
+     return this.httpClient.get<Animal[]>('http://localhost:9999/animal/getAnimalProductById/'+id);
    }
 }

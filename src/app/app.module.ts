@@ -9,6 +9,8 @@ import { HomeComponent } from './home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AnimalProductComponent } from './animal-product/animal-product.component';
 import { AnimalDetailsComponent } from './animal-details/animal-details.component';
+import { FormsModule } from '@angular/forms';
+import { HistoryComponent } from './history/history.component';
 
 @NgModule({
   declarations: [
@@ -17,10 +19,12 @@ import { AnimalDetailsComponent } from './animal-details/animal-details.componen
     FooterComponent,
     HomeComponent,
     AnimalProductComponent,
-    AnimalDetailsComponent
+    AnimalDetailsComponent,
+    HistoryComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     HttpClientModule
   ],

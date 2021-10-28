@@ -11,7 +11,17 @@ export class ReviewService {
 
   getReviews()
   {
-    return this.httpClient.get('http://localhost:8099/getAllReviews');
+    return this.httpClient.get('http://localhost:8096/getAllReviews');
+  }
+
+  getProductReviews(id:any)
+  {
+    return this.httpClient.get('http://localhost:8096/getAllProductReviews/'+id);
+  }
+
+  addReview(data:any)
+  {
+    return this.httpClient.post('http://localhost:8096/ajouterReviewr',data);
   }
 
 }

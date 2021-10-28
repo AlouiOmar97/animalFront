@@ -13,12 +13,18 @@ export class AnimalDetailsComponent implements OnInit {
 
   animalProductDetails: any | undefined;
   reviewList: any | undefined;
+  name="";
+  email="";
+  content="";
+  rating="";
+  prodId:any| undefined;
+
 
   constructor(private route: ActivatedRoute,private animalProductService: AnimalProductService,private payService: PayService,private reviewService:ReviewService) { }
 
   ngOnInit(): void {
     const productId = this.route.snapshot.paramMap.get('id');
-    
+    this.prodId=productId;
     console.log(productId);
     this.animalProductService.getAnimalProductDetails(productId).subscribe(
       data =>{
@@ -29,7 +35,7 @@ export class AnimalDetailsComponent implements OnInit {
       }
     );
 
-    this.reviewService.getReviews().subscribe(data=>{
+    this.reviewService.getProductReviews(productId).subscribe(data=>{
       this.reviewList=data;
       console.log(data);
       
@@ -38,7 +44,9 @@ export class AnimalDetailsComponent implements OnInit {
 
   pay(productPrice:any){
     console.log(productPrice);
-    let body={price:productPrice,title:this.animalProductDetails.title,description:this.animalProductDetails.description,user:1};
+    let body={price:productPrice,product_id:this.prodId,description:this.animalProductDetails.description,user:1};
+    console.log(body);
+    
     this.payService.pay(body).subscribe( data =>{
       console.log(data);
       console.log(data.forwardLink);
@@ -47,6 +55,32 @@ export class AnimalDetailsComponent implements OnInit {
       
     })
 
+  }
+
+  submitReview(){
+    console.log("clicked");
+    
+    //console.log(this.name+this.email+this.content+this.rating);
+    let review={name:this.name,email:this.email,content:this.content,rating:this.rating,idp:this.prodId};
+    console.log(review);
+    if(this.rating!=null && this.name!=null && this.email!=null && this.content!=null){
+      this.reviewService.addReview(review).subscribe(data=>{
+        console.log("adding");
+        console.log(data);
+        this.name="";
+        this.email="";
+        this.content="";
+        this.rating="";
+        this.reviewService.getProductReviews(this.prodId).subscribe(data=>{
+          this.reviewList=data;
+          console.log(data);
+          
+        })
+        
+      })
+    }
+    
+    
   }
 
 }

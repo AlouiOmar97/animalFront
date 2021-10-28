@@ -11,6 +11,15 @@ export class PayService {
 
   public pay(info:any) :Observable<any>{
     
-      return this.http.post("http://localhost:4000/api/pay/payment" , info);
+      return this.http.post("http://localhost:3100/api/payment/payment" , info);
+    }
+
+    public getAll() {
+      return this.http.get(`http://localhost:9999/payment/api/order/getOrders`);
+    }
+
+    public delete(id:any) {
+      const url='http://localhost:3100/api/order/deleteOrder/'+id;
+      return this.http.delete(url);
     }
 }
