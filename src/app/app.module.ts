@@ -12,6 +12,9 @@ import { AnimalDetailsComponent } from './animal-details/animal-details.componen
 import { FormsModule } from '@angular/forms';
 import { HistoryComponent } from './history/history.component';
 
+import { AnimalAComponent } from './animal-a/animal-a.component';
+import { AnimalADetailComponent } from './animal-adetail/animal-adetail.component';
+import { PlantAComponent } from './plant-a/plant-a.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,13 +23,16 @@ import { HistoryComponent } from './history/history.component';
     HomeComponent,
     AnimalProductComponent,
     AnimalDetailsComponent,
-    HistoryComponent
+    HistoryComponent,
+    AnimalAComponent,
+    AnimalADetailComponent,
+    PlantAComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
